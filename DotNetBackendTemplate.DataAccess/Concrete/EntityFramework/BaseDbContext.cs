@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DotNetBackendTemplate.DataAccess.Concrete.EntityFramework
 {
-	public class DotNetBackendTemplateContext : DbContext
+	public class BaseDbContext : DbContext
 	{
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

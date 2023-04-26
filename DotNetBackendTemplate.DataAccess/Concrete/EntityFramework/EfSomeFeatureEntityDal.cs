@@ -5,7 +5,7 @@ using DotNetBackendTemplate.Entities.Concrete;
 
 namespace DotNetBackendTemplate.DataAccess.Concrete.EntityFramework
 {
-	public class EfSomeFeatureEntityDal : EfEntityRepositoryBase<SomeFeatureEntity, DotNetBackendTemplateContext>, ISomeFeatureEntityDal
+	public class EfSomeFeatureEntityDal : EfEntityRepositoryBase<SomeFeatureEntity, BaseDbContext>, ISomeFeatureEntityDal
 	{
 		public EfSomeFeatureEntityDal()
 		{
