@@ -8,11 +8,14 @@
 
   <ItemGroup>
     <None Remove="Abstract\" />
+    <None Remove="Concrete\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNetBackendTemplate.Entities\DotNetBackendTemplate.Entities.csproj" />
+    <ProjectReference Include="..\DotNetBackendTemplate.DataAccess\DotNetBackendTemplate.DataAccess.csproj" />
   </ItemGroup>
 </Project>
