@@ -5,9 +5,8 @@ namespace DotNetBackendTemplate.Entities.Concrete
 {
 	public class SomeFeatureEntity : IEntity
 	{
-		public SomeFeatureEntity()
-		{
-		}
-	}
+        public int SomeFeatureEntityId { get; set; }
+        public string SomeFeatureEntityName { get; set; }
+    }
 }
 
