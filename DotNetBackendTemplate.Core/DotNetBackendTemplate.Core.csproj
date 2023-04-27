@@ -25,6 +25,7 @@
     <None Remove="Aspects\Autofac\" />
     <None Remove="Aspects\Autofac\Validation\" />
     <None Remove="CrossCuttingConcerns\Caching\" />
+    <None Remove="Aspects\Autofac\Caching\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -45,6 +46,7 @@
     <Folder Include="Aspects\Autofac\" />
     <Folder Include="Aspects\Autofac\Validation\" />
     <Folder Include="CrossCuttingConcerns\Caching\" />
+    <Folder Include="Aspects\Autofac\Caching\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
