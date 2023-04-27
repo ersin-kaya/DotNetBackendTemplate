@@ -29,6 +29,7 @@
     <None Remove="Utilities\IoC\" />
     <None Remove="DependencyResolvers\" />
     <None Remove="Extensions\" />
+    <None Remove="CrossCuttingConcerns\Caching\Microsoft\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -53,6 +54,7 @@
     <Folder Include="Utilities\IoC\" />
     <Folder Include="DependencyResolvers\" />
     <Folder Include="Extensions\" />
+    <Folder Include="CrossCuttingConcerns\Caching\Microsoft\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
