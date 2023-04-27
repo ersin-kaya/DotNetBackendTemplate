@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using DotNetBackendTemplate.Core.CrossCuttingConcerns.Caching;
 using DotNetBackendTemplate.Core.CrossCuttingConcerns.Caching.Microsoft;
 using DotNetBackendTemplate.Core.Utilities.IoC;
@@ -12,6 +13,7 @@ namespace DotNetBackendTemplate.Core.DependencyResolvers
         {
             services.AddMemoryCache();
             services.AddSingleton<ICacheManager, MemoryCacheManager>();
+            services.AddSingleton<Stopwatch>();
         }
     }
 }
