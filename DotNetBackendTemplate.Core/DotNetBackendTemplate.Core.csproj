@@ -20,6 +20,7 @@
     <None Remove="CrossCuttingConcerns\" />
     <None Remove="CrossCuttingConcerns\Validation\" />
     <None Remove="CrossCuttingConcerns\Validation\FluentValidation\" />
+    <None Remove="Utilities\Interceptors\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -35,10 +36,13 @@
     <Folder Include="CrossCuttingConcerns\" />
     <Folder Include="CrossCuttingConcerns\Validation\" />
     <Folder Include="CrossCuttingConcerns\Validation\FluentValidation\" />
+    <Folder Include="Utilities\Interceptors\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="Autofac" Version="7.0.1" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
   </ItemGroup>
 </Project>
