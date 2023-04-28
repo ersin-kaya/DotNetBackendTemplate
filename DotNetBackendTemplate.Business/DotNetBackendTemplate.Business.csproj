@@ -11,12 +11,16 @@
     <None Remove="Concrete\" />
     <None Remove="DependencyResolvers\" />
     <None Remove="DependencyResolvers\Autofac\" />
+    <None Remove="BusinessAspects\" />
+    <None Remove="BusinessAspects\Autofac\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract\" />
     <Folder Include="Concrete\" />
     <Folder Include="DependencyResolvers\" />
     <Folder Include="DependencyResolvers\Autofac\" />
+    <Folder Include="BusinessAspects\" />
+    <Folder Include="BusinessAspects\Autofac\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNetBackendTemplate.Entities\DotNetBackendTemplate.Entities.csproj" />
@@ -25,5 +29,6 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="7.0.1" />
     <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
 </Project>
