@@ -13,6 +13,12 @@
     <None Remove="DependencyResolvers\Autofac\" />
     <None Remove="BusinessAspects\" />
     <None Remove="BusinessAspects\Autofac\" />
+    <None Remove="ValidationRules\" />
+    <None Remove="ValidationRules\FluentValidation\" />
+    <None Remove="Constants\" />
+    <None Remove="Constants\Messages\" />
+    <None Remove="Constants\Messages\Abstract\" />
+    <None Remove="Constants\Messages\Concrete\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract\" />
@@ -21,6 +27,12 @@
     <Folder Include="DependencyResolvers\Autofac\" />
     <Folder Include="BusinessAspects\" />
     <Folder Include="BusinessAspects\Autofac\" />
+    <Folder Include="ValidationRules\" />
+    <Folder Include="ValidationRules\FluentValidation\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Constants\Messages\" />
+    <Folder Include="Constants\Messages\Abstract\" />
+    <Folder Include="Constants\Messages\Concrete\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNetBackendTemplate.Entities\DotNetBackendTemplate.Entities.csproj" />

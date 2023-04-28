@@ -9,10 +9,12 @@
   <ItemGroup>
     <None Remove="Concrete\" />
     <None Remove="DTOs\" />
+    <None Remove="Abstract\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Concrete\" />
     <Folder Include="DTOs\" />
+    <Folder Include="Abstract\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNetBackendTemplate.Core\DotNetBackendTemplate.Core.csproj" />
