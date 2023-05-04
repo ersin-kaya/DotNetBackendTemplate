@@ -2,6 +2,7 @@
 using DotNetBackendTemplate.Business.Abstract;
 using DotNetBackendTemplate.Business.ValidationRules.FluentValidation;
 using DotNetBackendTemplate.Core.Aspects.Autofac.Caching;
+using DotNetBackendTemplate.Core.Aspects.Autofac.Performance;
 using DotNetBackendTemplate.Core.Aspects.Autofac.Validation;
 using DotNetBackendTemplate.Core.Utilities.Results.Abstract;
 using DotNetBackendTemplate.Core.Utilities.Results.Concrete;
@@ -35,6 +36,7 @@ namespace DotNetBackendTemplate.Business.Concrete
         }
 
         [CacheAspect]
+        [PerformanceAspect(3)]
         public IDataResult<List<Asset>> GetAll()
         {
             return new SuccessDataResult<List<Asset>>(_assetDal.GetAll());
