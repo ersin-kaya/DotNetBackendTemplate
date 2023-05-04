@@ -24,6 +24,9 @@ namespace DotNetBackendTemplate.Business.DependencyResolvers.Autofac
             builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
+            builder.RegisterType<AssetManager>().As<IAssetService>();
+            builder.RegisterType<EfAssetDal>().As<IAssetDal>();
+
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()

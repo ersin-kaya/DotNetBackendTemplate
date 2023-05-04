@@ -14,6 +14,7 @@ namespace DotNetBackendTemplate.DataAccess.Concrete.EntityFramework
 
         public DbSet<SomeFeatureEntity> SomeFeatureEntities { get; set; }
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<Asset> Assets { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<AccountOperationClaim> AccountOperationClaims { get; set; }
     }
