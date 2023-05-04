@@ -9,10 +9,11 @@ namespace DotNetBackendTemplate.DataAccess.Concrete.EntityFramework
 	{
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost,1234;Database=DotNetBackendTemplate;");
+            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=DotNetBackendTemplate;User=SA;Password=y0sTP4sswd;Encrypt=False;");
         }
 
         public DbSet<SomeFeatureEntity> SomeFeatureEntities { get; set; }
+        public DbSet<Account> Accounts { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<AccountOperationClaim> AccountOperationClaims { get; set; }
     }
