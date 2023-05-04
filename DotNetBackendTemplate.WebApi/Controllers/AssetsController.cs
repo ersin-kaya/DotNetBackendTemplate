@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Threading.Tasks;
 using DotNetBackendTemplate.Business.Abstract;
@@ -58,6 +59,17 @@ namespace DotNetBackendTemplate.WebApi.Controllers
         public IActionResult Delete(Asset asset)
         {
             var result = _assetService.Delete(asset);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("transaction")]
+        public IActionResult TransactionTest(Asset asset)
+        {
+            var result = _assetService.TransactionalOperation(asset);
             if (result.Success)
             {
                 return Ok(result);
