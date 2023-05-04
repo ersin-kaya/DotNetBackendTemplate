@@ -23,6 +23,7 @@ namespace DotNetBackendTemplate.Business.Concrete
             _assetDal = assetDal;
 		}
 
+        [SecuredOperation("asset.add,asset,admin")]
         [CacheRemoveAspect("IAssetService.Get")]
         [ValidationAspect(typeof(AssetValidator))]
         public IResult Add(Asset asset)
@@ -31,6 +32,7 @@ namespace DotNetBackendTemplate.Business.Concrete
             return new SuccessResult();
         }
 
+        [SecuredOperation("asset.delete,asset,admin")]
         [CacheRemoveAspect("IAssetService.Get")]
         public IResult Delete(Asset asset)
         {
@@ -45,6 +47,7 @@ namespace DotNetBackendTemplate.Business.Concrete
             return new SuccessDataResult<List<Asset>>(_assetDal.GetAll());
         }
 
+        [SecuredOperation("asset.update,asset,admin")]
         [CacheRemoveAspect("IAssetService.Get")]
         [ValidationAspect(typeof(AssetValidator))]
         public IResult Update(Asset asset)
@@ -54,6 +57,7 @@ namespace DotNetBackendTemplate.Business.Concrete
         }
 
         [TransactionScopeAspect]
+        [SecuredOperation("admin")]
         [CacheRemoveAspect("IAssetService.Get")]
         [ValidationAspect(typeof(AssetValidator))]
         public IResult TransactionalOperation(Asset asset)
