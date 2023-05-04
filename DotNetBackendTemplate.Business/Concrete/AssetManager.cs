@@ -1,6 +1,7 @@
 ﻿using System;
 using DotNetBackendTemplate.Business.Abstract;
 using DotNetBackendTemplate.Business.ValidationRules.FluentValidation;
+using DotNetBackendTemplate.Core.Aspects.Autofac.Caching;
 using DotNetBackendTemplate.Core.Aspects.Autofac.Validation;
 using DotNetBackendTemplate.Core.Utilities.Results.Abstract;
 using DotNetBackendTemplate.Core.Utilities.Results.Concrete;
@@ -18,6 +19,7 @@ namespace DotNetBackendTemplate.Business.Concrete
             _assetDal = assetDal;
 		}
 
+        [CacheRemoveAspect("IAssetService.Get")]
         [ValidationAspect(typeof(AssetValidator))]
         public IResult Add(Asset asset)
         {
@@ -25,17 +27,20 @@ namespace DotNetBackendTemplate.Business.Concrete
             return new SuccessResult();
         }
 
+        [CacheRemoveAspect("IAssetService.Get")]
         public IResult Delete(Asset asset)
         {
             _assetDal.Delete(asset);
             return new SuccessResult();
         }
 
+        [CacheAspect]
         public IDataResult<List<Asset>> GetAll()
         {
             return new SuccessDataResult<List<Asset>>(_assetDal.GetAll());
         }
 
+        [CacheRemoveAspect("IAssetService.Get")]
         [ValidationAspect(typeof(AssetValidator))]
         public IResult Update(Asset asset)
         {
