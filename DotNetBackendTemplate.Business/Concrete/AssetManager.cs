@@ -1,5 +1,7 @@
 ﻿using System;
 using DotNetBackendTemplate.Business.Abstract;
+using DotNetBackendTemplate.Business.ValidationRules.FluentValidation;
+using DotNetBackendTemplate.Core.Aspects.Autofac.Validation;
 using DotNetBackendTemplate.Core.Utilities.Results.Abstract;
 using DotNetBackendTemplate.Core.Utilities.Results.Concrete;
 using DotNetBackendTemplate.DataAccess.Abstract;
@@ -16,6 +18,7 @@ namespace DotNetBackendTemplate.Business.Concrete
             _assetDal = assetDal;
 		}
 
+        [ValidationAspect(typeof(AssetValidator))]
         public IResult Add(Asset asset)
         {
             _assetDal.Add(asset);
@@ -33,6 +36,7 @@ namespace DotNetBackendTemplate.Business.Concrete
             return new SuccessDataResult<List<Asset>>(_assetDal.GetAll());
         }
 
+        [ValidationAspect(typeof(AssetValidator))]
         public IResult Update(Asset asset)
         {
             _assetDal.Update(asset);
