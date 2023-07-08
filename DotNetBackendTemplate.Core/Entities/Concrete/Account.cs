@@ -3,9 +3,9 @@ namespace DotNetBackendTemplate.Core.Entities.Concrete
 {
     public class Account : IEntity
     {
-        public int AccountId { get; set; }
-        public int AccountTypeId { get; set; }
-        public int AccountStatusId { get; set; }
+        public int Id { get; set; }
+        public int TypeId { get; set; }
+        public int StatusId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

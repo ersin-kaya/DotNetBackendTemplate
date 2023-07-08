@@ -35,8 +35,8 @@ namespace DotNetBackendTemplate.Business.Concrete
             HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
             var account = new Account
             {
-                AccountTypeId = accountForRegisterDto.AccountTypeId,
-                AccountStatusId = accountForRegisterDto.AccountStatusId,
+                TypeId = accountForRegisterDto.AccountTypeId,
+                StatusId = accountForRegisterDto.AccountStatusId,
                 Email = accountForRegisterDto.Email,
                 FirstName = accountForRegisterDto.FirstName,
                 LastName = accountForRegisterDto.LastName,
