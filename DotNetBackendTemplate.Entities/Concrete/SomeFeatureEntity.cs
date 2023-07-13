@@ -7,6 +7,8 @@ namespace DotNetBackendTemplate.Entities.Concrete
 	{
         public int SomeFeatureEntityId { get; set; }
         public string SomeFeatureEntityName { get; set; }
+        public DateTime CreatedTime { get; set; }
+        public DateTime LastUpdatedTime { get; set; }
     }
 }
 
